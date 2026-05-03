@@ -1,0 +1,168 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: US Court of Appeals for the Federal Circuit
+  description: >-
+    Vocabulary taxonomy for the U.S. Court of Appeals for the Federal Circuit
+    covering cases, opinions, docket entries, PACER access, and legal subject
+    matter in patent law, international trade, government contracts, and
+    specialized federal jurisdiction.
+  created: "2026-05-03"
+  modified: "2026-05-03"
+
+operational:
+  apis:
+    - name: PACER - Public Access to Court Electronic Records
+      namespace: pacer
+      baseUrl: https://pacer.uscourts.gov/
+      status: active
+    - name: Federal Circuit Opinions and Orders
+      namespace: opinions-orders
+      baseUrl: https://www.cafc.uscourts.gov/home/case-information/opinions-orders/
+      status: active
+    - name: Federal Circuit Case Records
+      namespace: case-records
+      baseUrl: https://www.cafc.uscourts.gov/home/case-information/case-records/
+      status: active
+
+  resources:
+    - name: cases
+      description: Federal Circuit appeal cases
+      apis: [pacer, case-records]
+      actions: [search, get, list]
+    - name: opinions
+      description: Published Federal Circuit opinions, orders, and judgments
+      apis: [opinions-orders]
+      actions: [search, get, list, download]
+    - name: docket-entries
+      description: PACER docket entries for Federal Circuit cases
+      apis: [pacer]
+      actions: [list, get]
+
+  actions:
+    - name: search
+      description: Search cases or opinions by case number, party name, or subject matter
+      pattern: query
+    - name: get
+      description: Retrieve a single case or opinion by identifier
+      pattern: read
+    - name: list
+      description: List cases or opinions with optional filters
+      pattern: read
+    - name: download
+      description: Download opinion PDF documents
+      pattern: read
+
+  schemas:
+    core:
+      - name: FederalCircuitCase
+        description: An appeal case before the Federal Circuit
+        key_properties: [case_number, case_title, date_filed, case_type, status, parties]
+      - name: FederalCircuitOpinion
+        description: A published Federal Circuit opinion or order
+        key_properties: [case_number, title, opinion_type, date_issued, outcome, is_precedential]
+      - name: DocketEntry
+        description: A PACER docket entry in a Federal Circuit case
+        key_properties: [docket_number, entry_number, date_filed, document_type, description]
+
+  parameters:
+    identifiers:
+      - name: case_number
+        description: Federal Circuit case number (e.g., 2024-2296)
+      - name: docket_number
+        description: PACER docket identifier
+    filters:
+      - name: case_type
+        description: Filter by legal subject matter (Patent, Government Contracts, etc.)
+      - name: date_filed
+        description: Filter cases by filing date range
+      - name: opinion_type
+        description: Filter opinions by type (Precedential, Non-Precedential, etc.)
+      - name: is_precedential
+        description: Filter for only precedential opinions
+
+  enums:
+    case_types:
+      - Patent
+      - International Trade
+      - Government Contracts
+      - Federal Employment
+      - Veterans Benefits
+      - Merit Systems Protection Board
+      - Court of Federal Claims
+      - Trade Secrets
+      - Administrative Law
+    opinion_types:
+      - Precedential Opinion
+      - Non-Precedential Opinion
+      - Rule 36 Judgment
+      - En Banc Opinion
+      - Precedential Order
+    outcomes:
+      - Affirmed
+      - Reversed
+      - Vacated
+      - Remanded
+      - Dismissed
+      - Vacated and Remanded
+    case_status:
+      - Open
+      - Decided
+      - Dismissed
+      - Remanded
+      - En Banc
+
+capability:
+  workflows: []
+  personas:
+    - id: patent-attorney
+      name: Patent Attorney
+      description: IP attorney monitoring Federal Circuit patent law precedent and pending appeals
+      workflows: []
+    - id: government-contracts-attorney
+      name: Government Contracts Attorney
+      description: Attorney tracking Federal Circuit decisions on government contracts and federal claims
+      workflows: []
+    - id: legal-researcher
+      name: Legal Researcher
+      description: Academic or law clerk conducting research on Federal Circuit jurisprudence
+      workflows: []
+    - id: litigation-monitor
+      name: Litigation Monitor
+      description: Business analyst monitoring Federal Circuit cases affecting specific technology or industry sectors
+      workflows: []
+
+  domains:
+    - name: Patent Law
+      description: Patent validity, infringement, claim construction, and eligibility
+    - name: International Trade
+      description: International Trade Commission decisions and trade regulation
+    - name: Government Contracts
+      description: Federal procurement law and Court of Federal Claims appeals
+    - name: Federal Employment
+      description: Merit Systems Protection Board and federal employee appeals
+    - name: Veterans Benefits
+      description: Veterans Appeals Board decisions on benefits
+
+crossReference:
+  - resource: cases
+    operations:
+      - search by party name
+      - filter by case type
+      - get by case number
+    workflows: []
+    personas: [patent-attorney, government-contracts-attorney, legal-researcher, litigation-monitor]
+  - resource: opinions
+    operations:
+      - list by date range
+      - filter by subject matter
+      - filter precedential only
+      - download PDF
+    workflows: []
+    personas: [patent-attorney, legal-researcher, litigation-monitor]
+  - resource: docket-entries
+    operations:
+      - list by case number
+      - filter by document type
+    workflows: []
+    personas: [patent-attorney, government-contracts-attorney, legal-researcher]

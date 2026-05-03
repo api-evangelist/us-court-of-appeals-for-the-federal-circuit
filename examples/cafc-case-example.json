@@ -1,0 +1,18 @@
+{
+  "case_number": "2024-2296",
+  "case_title": "Acme Corp. v. Widget Technology, Inc.",
+  "docket_number": "2024-2296",
+  "court_code": "CAFC",
+  "date_filed": "2025-09-12",
+  "case_type": "Merit Systems Protection Board",
+  "origin_court": "U.S. District Court for the District of Delaware",
+  "status": "Vacated",
+  "parties": [
+    {
+      "name": "sample-name",
+      "role": "Appellee"
+    }
+  ],
+  "date_decided": "2025-09-12",
+  "oral_argument_date": "2025-09-12"
+}

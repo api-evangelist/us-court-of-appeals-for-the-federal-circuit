@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/us-court-of-appeals-for-the-federal-circuit/refs/heads/main/json-schema/cafc-docket-entry-schema.json",
+  "title": "DocketEntry",
+  "description": "A docket entry in a Federal Circuit case as accessible via PACER, representing a filing or court action in the case record.",
+  "type": "object",
+  "properties": {
+    "docket_number": {
+      "type": "string",
+      "description": "PACER docket identifier for the case.",
+      "example": "CAFC-2024-2296"
+    },
+    "entry_number": {
+      "type": "integer",
+      "description": "Sequential docket entry number.",
+      "minimum": 1
+    },
+    "date_filed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date this docket entry was filed."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the docket entry filing or court action.",
+      "example": "BRIEF filed by Appellant Acme Corp. Service: 01/15/2025"
+    },
+    "filing_party": {
+      "type": "string",
+      "description": "Party who filed this document.",
+      "example": "Appellant"
+    },
+    "document_type": {
+      "type": "string",
+      "description": "Type of document filed.",
+      "enum": [
+        "Brief",
+        "Appendix",
+        "Motion",
+        "Order",
+        "Opinion",
+        "Judgment",
+        "Notice",
+        "Scheduling Order",
+        "Oral Argument Notice",
+        "Mandate",
+        "Petition for Rehearing",
+        "Reply Brief"
+      ]
+    },
+    "pacer_doc_id": {
+      "type": "string",
+      "description": "PACER document identifier for accessing the filed document."
+    },
+    "page_count": {
+      "type": "integer",
+      "description": "Number of pages in the filed document.",
+      "minimum": 1
+    },
+    "is_sealed": {
+      "type": "boolean",
+      "description": "Whether this docket entry is sealed from public view."
+    }
+  },
+  "required": ["docket_number", "entry_number", "date_filed", "document_type"]
+}

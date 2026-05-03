@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/us-court-of-appeals-for-the-federal-circuit/refs/heads/main/json-schema/cafc-opinion-schema.json",
+  "title": "FederalCircuitOpinion",
+  "description": "An opinion, order, or judgment published by the U.S. Court of Appeals for the Federal Circuit.",
+  "type": "object",
+  "properties": {
+    "case_number": {
+      "type": "string",
+      "description": "Federal Circuit case number associated with this opinion.",
+      "example": "2024-2296"
+    },
+    "title": {
+      "type": "string",
+      "description": "Case title for this opinion.",
+      "example": "Acme Corp. v. Widget Technology, Inc."
+    },
+    "opinion_type": {
+      "type": "string",
+      "description": "Type of opinion or order published.",
+      "enum": [
+        "Precedential Opinion",
+        "Non-Precedential Opinion",
+        "Rule 36 Judgment",
+        "Precedential Order",
+        "Non-Precedential Order",
+        "En Banc Opinion",
+        "Errata"
+      ]
+    },
+    "date_issued": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the opinion was issued."
+    },
+    "outcome": {
+      "type": "string",
+      "description": "Outcome of the appeal in this opinion.",
+      "enum": [
+        "Affirmed",
+        "Reversed",
+        "Vacated",
+        "Remanded",
+        "Affirmed in Part, Reversed in Part",
+        "Dismissed",
+        "Vacated and Remanded"
+      ]
+    },
+    "judges": {
+      "type": "array",
+      "description": "Federal Circuit judges on the panel or in the en banc court.",
+      "items": {
+        "type": "string"
+      },
+      "example": ["Chen", "Prost", "Stoll"]
+    },
+    "authoring_judge": {
+      "type": "string",
+      "description": "Judge who authored the majority opinion.",
+      "example": "Chen"
+    },
+    "subject_matter": {
+      "type": "string",
+      "description": "Primary subject matter area of the opinion.",
+      "enum": [
+        "Patent Validity",
+        "Patent Infringement",
+        "Patent Claim Construction",
+        "Patent Eligibility",
+        "Trade Secrets",
+        "International Trade",
+        "Government Contracts",
+        "Federal Employment",
+        "Veterans Benefits",
+        "Administrative Law",
+        "Court of Federal Claims"
+      ]
+    },
+    "pdf_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the full opinion PDF on cafc.uscourts.gov.",
+      "example": "https://www.cafc.uscourts.gov/opinions-orders/24-2296.OPINION.3-6-2026_2657484.pdf"
+    },
+    "is_precedential": {
+      "type": "boolean",
+      "description": "Whether this opinion is designated as precedential."
+    }
+  },
+  "required": ["case_number", "title", "opinion_type", "date_issued"]
+}

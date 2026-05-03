@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/us-court-of-appeals-for-the-federal-circuit/refs/heads/main/json-schema/cafc-case-schema.json",
+  "title": "FederalCircuitCase",
+  "description": "A case before the U.S. Court of Appeals for the Federal Circuit (CAFC), accessible via PACER.",
+  "type": "object",
+  "properties": {
+    "case_number": {
+      "type": "string",
+      "description": "Federal Circuit case number.",
+      "example": "2024-2296"
+    },
+    "case_title": {
+      "type": "string",
+      "description": "Full title of the case.",
+      "example": "Acme Corp. v. Widget Technology, Inc."
+    },
+    "docket_number": {
+      "type": "string",
+      "description": "PACER docket number for this case."
+    },
+    "court_code": {
+      "type": "string",
+      "description": "PACER court identifier for the Federal Circuit.",
+      "const": "CAFC"
+    },
+    "date_filed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the case was filed in the Federal Circuit."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "Type of case before the Federal Circuit.",
+      "enum": [
+        "Patent",
+        "International Trade",
+        "Government Contracts",
+        "Federal Employment",
+        "Veterans Benefits",
+        "Merit Systems Protection Board",
+        "Court of Federal Claims",
+        "Trade Secrets",
+        "Administrative Law"
+      ]
+    },
+    "origin_court": {
+      "type": "string",
+      "description": "Lower court or agency from which the appeal originates.",
+      "example": "U.S. District Court for the District of Delaware"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the case.",
+      "enum": [
+        "Open",
+        "Decided",
+        "Dismissed",
+        "Remanded",
+        "Affirmed",
+        "Reversed",
+        "Vacated",
+        "En Banc"
+      ]
+    },
+    "parties": {
+      "type": "array",
+      "description": "Parties involved in the case.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the party."
+          },
+          "role": {
+            "type": "string",
+            "enum": ["Appellant", "Appellee", "Petitioner", "Respondent", "Intervenor", "Amicus"],
+            "description": "Role of the party in the appeal."
+          }
+        },
+        "required": ["name", "role"]
+      }
+    },
+    "date_decided": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the case was decided, if resolved."
+    },
+    "oral_argument_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of oral argument, if held."
+    }
+  },
+  "required": ["case_number", "case_title", "date_filed", "case_type"]
+}

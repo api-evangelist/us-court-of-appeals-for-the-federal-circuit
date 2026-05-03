@@ -1,0 +1,116 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "cafc": "https://www.cafc.uscourts.gov/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "DocketEntry": "cafc:DocketEntry",
+    "FederalCircuitCase": "cafc:FederalCircuitCase",
+    "FederalCircuitOpinion": "cafc:FederalCircuitOpinion",
+    "authoring_judge": {
+      "@id": "cafc:authoring_judge",
+      "@type": "xsd:string"
+    },
+    "case_number": {
+      "@id": "cafc:case_number",
+      "@type": "xsd:string"
+    },
+    "case_title": {
+      "@id": "cafc:case_title",
+      "@type": "xsd:string"
+    },
+    "case_type": {
+      "@id": "cafc:case_type",
+      "@type": "xsd:string"
+    },
+    "court_code": {
+      "@id": "cafc:court_code",
+      "@type": "xsd:string"
+    },
+    "date_decided": {
+      "@id": "cafc:date_decided",
+      "@type": "xsd:date"
+    },
+    "date_filed": {
+      "@id": "cafc:date_filed",
+      "@type": "xsd:date"
+    },
+    "date_issued": {
+      "@id": "cafc:date_issued",
+      "@type": "xsd:date"
+    },
+    "description": "schema:description",
+    "docket_number": {
+      "@id": "cafc:docket_number",
+      "@type": "xsd:string"
+    },
+    "document_type": {
+      "@id": "cafc:document_type",
+      "@type": "xsd:string"
+    },
+    "entry_number": {
+      "@id": "cafc:entry_number",
+      "@type": "xsd:integer"
+    },
+    "filing_party": {
+      "@id": "cafc:filing_party",
+      "@type": "xsd:string"
+    },
+    "is_precedential": {
+      "@id": "cafc:is_precedential",
+      "@type": "xsd:boolean"
+    },
+    "is_sealed": {
+      "@id": "cafc:is_sealed",
+      "@type": "xsd:boolean"
+    },
+    "judges": {
+      "@id": "cafc:judges",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "opinion_type": {
+      "@id": "cafc:opinion_type",
+      "@type": "xsd:string"
+    },
+    "oral_argument_date": {
+      "@id": "cafc:oral_argument_date",
+      "@type": "xsd:date"
+    },
+    "origin_court": {
+      "@id": "cafc:origin_court",
+      "@type": "xsd:string"
+    },
+    "outcome": {
+      "@id": "cafc:outcome",
+      "@type": "xsd:string"
+    },
+    "pacer_doc_id": {
+      "@id": "cafc:pacer_doc_id",
+      "@type": "xsd:string"
+    },
+    "page_count": {
+      "@id": "cafc:page_count",
+      "@type": "xsd:integer"
+    },
+    "parties": {
+      "@id": "cafc:parties",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "pdf_url": {
+      "@id": "cafc:pdf_url",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "cafc:status",
+      "@type": "xsd:string"
+    },
+    "subject_matter": {
+      "@id": "cafc:subject_matter",
+      "@type": "xsd:string"
+    },
+    "title": "schema:name"
+  }
+}
