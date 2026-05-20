@@ -97,6 +97,8 @@ description: >-
   APIs including the Authentication API and the Case Locator (PCL) API for
   programmatic access to federal case data across all federal courts.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/court-of-appeals-for-the-federal-circuit
   - type: Website
     url: https://www.cafc.uscourts.gov/
   - type: Documentation
