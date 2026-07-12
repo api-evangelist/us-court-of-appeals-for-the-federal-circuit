@@ -97,6 +97,10 @@ description: >-
   APIs including the Authentication API and the Case Locator (PCL) API for
   programmatic access to federal case data across all federal courts.
 common:
+  - type: DomainSecurity
+    url: security/us-court-of-appeals-for-the-federal-circuit-domain-security.yml
+  - url: https://www.cafc.uscourts.gov/feed/
+    type: Blog
   - type: LinkedIn
     url: https://www.linkedin.com/company/court-of-appeals-for-the-federal-circuit
   - type: Website
