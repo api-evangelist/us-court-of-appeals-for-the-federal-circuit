@@ -76,7 +76,7 @@ apis:
       provides aggregated case statistics via a data request process.
 name: US Court of Appeals for the Federal Circuit
 tags:
-  - Federal-Government
+  - Federal Government
   - Legal
   - Patent Law
   - Federal Courts
@@ -87,6 +87,7 @@ tags_raw:
   - Patent Law
   - Federal Courts
   - Appellate Courts
+  - Federal-Government
 type: Index
 deliveryModel:
   model: unknown
