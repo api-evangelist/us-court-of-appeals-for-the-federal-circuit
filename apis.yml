@@ -127,6 +127,12 @@ description: >-
   APIs including the Authentication API and the Case Locator (PCL) API for
   programmatic access to federal case data across all federal courts.
 common:
+  - type: Plans
+    url: plans/us-court-of-appeals-for-the-federal-circuit-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/us-court-of-appeals-for-the-federal-circuit-rate-limits.yml
+  - type: FinOps
+    url: finops/us-court-of-appeals-for-the-federal-circuit-finops.yml
   - type: DomainSecurity
     url: security/us-court-of-appeals-for-the-federal-circuit-domain-security.yml
   - url: https://www.cafc.uscourts.gov/feed/
