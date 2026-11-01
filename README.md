@@ -1,4 +1,4 @@
-# US Court of Appeals for the Federal Circuit (us-court-of-appeals-for-the-federal-circuit)
+# US Court of Appeals for the Federal Circuit
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,145 +64,149 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The US Court of Appeals for the Federal Circuit is a federal appellate court with nationwide jurisdiction over cases involving patent law, international trade, government contracts, federal employment, veterans' benefits, and other specialized areas of federal law. The court provides public access to opinions and orders from 2004 to present, with full case records accessible via PACER for cases filed after March 1, 2012. PACER offers developer APIs including the Authentication API and Case Locator (PCL) API for programmatic federal court data access.
+The US Court of Appeals for the Federal Circuit is a federal appellate court with nationwide jurisdiction over cases involving patent law, international trade, government contracts, federal employment, veterans' benefits, and other specialized areas of federal law. The court provides public access to opinions and orders online from 2004 to present, with full case records accessible via PACER for cases filed after March 1, 2012. The PACER system offers developer APIs including the Authentication API and the Case Locator (PCL) API for programmatic access to federal case data across all federal courts.
 
-**URL:** [https://www.cafc.uscourts.gov/](https://www.cafc.uscourts.gov/)
+**Areas:** Federal Government · Legal · Patent Law · Federal Courts · Appellate Courts
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## US Court of Appeals for the Federal Circuit on APIs.io
 
-## Tags:
+Everything profiled for US Court of Appeals for the Federal Circuit is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/us-court-of-appeals-for-the-federal-circuit/](https://apis.io/providers/us-court-of-appeals-for-the-federal-circuit/)** — or go straight to one of the APIs or properties below.
 
- - Federal Government, Legal, Patent Law, Federal Courts, Appellate Courts
+### APIs (3)
 
-## Timestamps
+- [PACER - Public Access to Court Electronic Records](https://apis.io/apis/us-court-of-appeals-for-the-federal-circuit/pacer/) — Public Access to Court Electronic Records (PACER) provides online access to U.S. Federal Court case and docket information from Federal Courts including the…
+- [Federal Circuit Opinions and Orders](https://apis.io/apis/us-court-of-appeals-for-the-federal-circuit/opinions-orders/) — Public access to U.S. Court of Appeals for the Federal Circuit opinions, orders, and judgments. Includes precedential opinions, Rule 36 judgments,…
+- [Federal Circuit Case Records](https://apis.io/apis/us-court-of-appeals-for-the-federal-circuit/case-records/) — Case information and records for the U.S. Court of Appeals for the Federal Circuit. Cases filed on or after March 1, 2012, are available through PACER or at…
 
-- **Created:** 2024-12-25
-- **Modified:** 2026-05-03
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### PACER - Public Access to Court Electronic Records
+#### JSON Schema (3)
 
-Public Access to Court Electronic Records (PACER) provides online access to U.S. Federal Court case and docket information including the Federal Circuit (CAFC). Provides Authentication API and Case Locator (PCL) API for programmatic access.
+The data models the API reads and writes.
 
-**Human URL:** [https://pacer.uscourts.gov/file-case/court-cmecf-lookup/court/CAFC](https://pacer.uscourts.gov/file-case/court-cmecf-lookup/court/CAFC)
+- [FederalCircuitCase](https://apis.io/schemas/us-court-of-appeals-for-the-federal-circuit/cafc-case/)
+- [DocketEntry](https://apis.io/schemas/us-court-of-appeals-for-the-federal-circuit/cafc-docket-entry/)
+- [FederalCircuitOpinion](https://apis.io/schemas/us-court-of-appeals-for-the-federal-circuit/cafc-opinion/)
 
-#### Tags:
+#### JSON Structure (3)
 
- - Federal Courts, PACER, Case Records, Legal
+Data models expressed in JSON Structure.
 
-#### Properties
+- [Cafc Case Structure](https://apis.io/json-structure/us-court-of-appeals-for-the-federal-circuit/cafc-case-structure/)
+- [Cafc Docket Entry Structure](https://apis.io/json-structure/us-court-of-appeals-for-the-federal-circuit/cafc-docket-entry-structure/)
+- [Cafc Opinion Structure](https://apis.io/json-structure/us-court-of-appeals-for-the-federal-circuit/cafc-opinion-structure/)
 
-- [Documentation](https://pacer.uscourts.gov/file-case/court-cmecf-lookup/court/CAFC)
-- [APIReference - PACER Developer Resources](https://pacer.uscourts.gov/file-case/developer-resources)
-- [Documentation - PACER Authentication API User Guide](https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide)
-- [Documentation - PACER Case Locator (PCL) API User Guide](https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide)
+#### JSON-LD (1)
 
-### Federal Circuit Opinions and Orders
+Linked-data contexts for the provider's vocabulary.
 
-Public access to Federal Circuit opinions, orders, and judgments from October 1, 2004, to present in PDF format.
+- [Us Court Of Appeals For The Federal Circuit Context](https://apis.io/jsonld/us-court-of-appeals-for-the-federal-circuit/us-court-of-appeals-for-the-federal-circuit-context/)
 
-**Human URL:** [https://www.cafc.uscourts.gov/home/case-information/opinions-orders/](https://www.cafc.uscourts.gov/home/case-information/opinions-orders/)
+#### Vocabulary (1)
 
-#### Tags:
+The provider's domain terms, defined.
 
- - Federal Courts, Opinions, Legal Decisions, Legal
+- [Us Court Of Appeals For The Federal Circuit Vocabulary](https://apis.io/vocabularies/us-court-of-appeals-for-the-federal-circuit/us-court-of-appeals-for-the-federal-circuit-vocabulary/)
 
-#### Properties
+#### Examples (3)
 
-- [Documentation - Opinions and Orders Search](https://www.cafc.uscourts.gov/home/case-information/opinions-orders/)
+Example requests and responses.
 
-### Federal Circuit Case Records
+- [Cafc Case Example](https://apis.io/examples/us-court-of-appeals-for-the-federal-circuit/cafc-case-example/)
+- [Cafc Docket Entry Example](https://apis.io/examples/us-court-of-appeals-for-the-federal-circuit/cafc-docket-entry-example/)
+- [Cafc Opinion Example](https://apis.io/examples/us-court-of-appeals-for-the-federal-circuit/cafc-opinion-example/)
 
-Case information and records for the Federal Circuit, accessible via PACER for cases filed on or after March 1, 2012.
+#### Governance rules (1)
 
-**Human URL:** [https://www.cafc.uscourts.gov/home/case-information/case-records/](https://www.cafc.uscourts.gov/home/case-information/case-records/)
+Spectral rulesets for the provider's contracts.
 
-#### Tags:
+- [US Court of Appeals for the Federal Circuit — jsonschema rules](https://apis.io/rules/us-court-of-appeals-for-the-federal-circuit/us-court-of-appeals-for-the-federal-circuit-jsonschema-spectral-rules/)
 
- - Federal Courts, Case Records, Legal
+#### Security (1)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://www.cafc.uscourts.gov/home/case-information/case-records/)
-- [Getting Started](https://www.cafc.uscourts.gov/home/case-information/)
-- [JSONSchema - Federal Circuit Case Schema](json-schema/cafc-case-schema.json)
-- [JSONSchema - Federal Circuit Opinion Schema](json-schema/cafc-opinion-schema.json)
-- [JSONSchema - PACER Docket Entry Schema](json-schema/cafc-docket-entry-schema.json)
+- [Us Court Of Appeals For The Federal Circuit Domain Security](https://apis.io/security/us-court-of-appeals-for-the-federal-circuit/us-court-of-appeals-for-the-federal-circuit-domain-security/)
 
-## Common Properties
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Us Court Of Appeals For The Federal Circuit Plans Pricing](https://apis.io/plans/us-court-of-appeals-for-the-federal-circuit/us-court-of-appeals-for-the-federal-circuit-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Us Court Of Appeals For The Federal Circuit Rate Limits](https://apis.io/rate-limits/us-court-of-appeals-for-the-federal-circuit/us-court-of-appeals-for-the-federal-circuit-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Us Court Of Appeals For The Federal Circuit Finops](https://apis.io/finops/us-court-of-appeals-for-the-federal-circuit/us-court-of-appeals-for-the-federal-circuit-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.cafc.uscourts.gov/)
-- [Documentation - Case Information](https://www.cafc.uscourts.gov/home/case-information/)
-- [Documentation - Opinions and Orders](https://www.cafc.uscourts.gov/home/case-information/opinions-orders/)
-- [Getting Started - PACER Registration](https://pacer.uscourts.gov/)
-- [APIReference - PACER Developer Resources](https://pacer.uscourts.gov/file-case/developer-resources)
-- [Rules and Procedures](https://www.cafc.uscourts.gov/home/rules-procedures/)
-- [Contact the Court](https://www.cafc.uscourts.gov/home/about-the-court/contact/)
-- [Vocabulary](vocabulary/us-court-of-appeals-for-the-federal-circuit-vocabulary.yml)
-- [JSON-LD Context](json-ld/us-court-of-appeals-for-the-federal-circuit-context.jsonld)
+- [Documentation](https://www.cafc.uscourts.gov/home/case-information/)
+- [Getting started](https://pacer.uscourts.gov/)
+- [API reference](https://pacer.uscourts.gov/file-case/developer-resources)
+- [Blog](https://www.cafc.uscourts.gov/feed/)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| PACER Case Locator API | Programmatic access to the nationwide federal court case index for case and party searches across all federal courts. |
-| PACER Authentication API | API allowing automated authentication to PACER without a user interface for programmatic court record access. |
-| CM/ECF Electronic Filing | Court's electronic filing system with XML tags and NextGen CM/ECF integration for document filing and management. |
-| Online Opinions and Orders | Free public access to all Federal Circuit opinions, orders, and judgments published from October 2004 to present. |
-| Scheduled Cases Calendar | Online calendar of scheduled oral argument cases and courtroom assignments. |
-| Statistical Reports | Aggregated case statistics and reports available through the data request process. |
+**Kin Score 24.2** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 26.7 |
+| Contract governance | 23.5 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 7.9 |
 
-| Name | Description |
-|------|-------------|
-| Patent Case Legal Research | Researching Federal Circuit patent law precedent using published opinions, orders, and PACER case dockets. |
-| Federal Employment and Veterans Claims Research | Finding Federal Circuit decisions on government contracts, federal employment, and veterans benefits. |
-| Court Records Access via PACER | Programmatic access to Federal Circuit case dockets and filings using PACER APIs. |
-| Appellate Monitoring | Monitoring active Federal Circuit cases, oral arguments, and new opinions in specific legal areas. |
-| Legal Data Analytics | Analyzing trends in Federal Circuit patent, trade, and government contract decisions. |
+**Agent readiness 0.6** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| PACER System | Federal Circuit case records integrated with the nationwide PACER federal court records system. |
-| CourtListener | Free Law Project's CourtListener provides API access to Federal Circuit opinions and RECAP-archived documents. |
-| Justia Dockets | Justia aggregates Federal Circuit case docket information for public access. |
+**Regulatory alignment 10.8** — Government & Public Sector
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/us-court-of-appeals-for-the-federal-circuit/](https://apis.io/providers/us-court-of-appeals-for-the-federal-circuit/).
 
-Machine-readable data specifications organized by format.
+## How this profile is made
 
-### JSON Schema
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Federal Circuit Case Schema](json-schema/cafc-case-schema.json)
-- [Federal Circuit Opinion Schema](json-schema/cafc-opinion-schema.json)
-- [PACER Docket Entry Schema](json-schema/cafc-docket-entry-schema.json)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for US Court of Appeals for the Federal Circuit: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Structure
+## Open an issue
 
-- [Federal Circuit Case Structure](json-structure/cafc-case-structure.json)
-- [Federal Circuit Opinion Structure](json-structure/cafc-opinion-structure.json)
-- [PACER Docket Entry Structure](json-structure/cafc-docket-entry-structure.json)
-
-### JSON-LD
-
-- [US Court of Appeals for the Federal Circuit Context](json-ld/us-court-of-appeals-for-the-federal-circuit-context.jsonld)
-
-### Examples
-
-- [Federal Circuit Case Example](examples/cafc-case-example.json)
-- [Federal Circuit Opinion Example](examples/cafc-opinion-example.json)
-- [PACER Docket Entry Example](examples/cafc-docket-entry-example.json)
-
-## Vocabulary
-
-- [US Court of Appeals for the Federal Circuit Vocabulary](vocabulary/us-court-of-appeals-for-the-federal-circuit-vocabulary.yml) — Unified taxonomy mapping 3 resources, 4 actions, 0 workflows, and 4 personas across patent law, government contracts, veterans benefits, and federal court data dimensions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/us-court-of-appeals-for-the-federal-circuit/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
